@@ -1,0 +1,74 @@
+.listing-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.listing-card-inactive {
+  opacity: 0.7;
+}
+
+.listing-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  background: #cfe3c8;
+  color: #1f5a2a;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.listing-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+}
+
+.listing-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.listing-card-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.listing-card-line {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.listing-card-price {
+  margin: 4px 0 0;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.listing-card-small {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-soldout {
+  background: #e6e4da;
+  color: #3d4640;
+}
+.badge-expired {
+  background: var(--amber-bg);
+  color: var(--amber);
+}

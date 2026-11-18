@@ -1,0 +1,145 @@
+.lf-dialog {
+  width: min(640px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  color: var(--ink);
+  overflow-y: auto;
+}
+.lf-dialog::backdrop {
+  background: rgba(20, 32, 22, 0.55);
+}
+
+.lf {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+}
+.lf h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.lf-note {
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lf-field {
+  display: block;
+  font-size: 14px;
+}
+.lf-field input:not([type="file"]),
+.lf-field select,
+.lf-field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 16px;
+}
+.lf-field input:focus,
+.lf-field select:focus,
+.lf-field textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.lf-field small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+.lf-field input[type="file"] {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.lf-collect {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.lf-collect legend {
+  padding: 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.lf-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+.lf-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+.lf-fee {
+  flex-basis: 100%;
+  max-width: 220px;
+}
+
+.lf-preview {
+  display: block;
+  width: 140px;
+  height: 110px;
+  margin-top: 10px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.lf-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.lf-label-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.lf-count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.lf-field .lf-error,
+.lf-error {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--danger);
+}
+.lf-field [aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+@media (max-width: 520px) {
+  .lf-grid {
+    grid-template-columns: 1fr;
+  }
+  .lf {
+    padding: 20px;
+  }
+}

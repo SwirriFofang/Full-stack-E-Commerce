@@ -1,0 +1,49 @@
+.tracker {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tracker li {
+  position: relative;
+  flex: 1;
+  font-size: 13px;
+  text-align: center;
+  color: var(--muted);
+}
+.tracker li::before {
+  content: "";
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto 6px;
+  background: #d9d6c7;
+  border-radius: 50%;
+}
+.tracker li::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: #d9d6c7;
+}
+.tracker li:first-child::after {
+  display: none;
+}
+.tracker .done::before,
+.tracker .current::before,
+.tracker .done::after,
+.tracker .current::after {
+  background: var(--green);
+}
+.tracker .current {
+  font-weight: 700;
+  color: var(--ink);
+}
+.tracker .current::before {
+  box-shadow: 0 0 0 4px var(--green-light);
+}

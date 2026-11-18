@@ -1,0 +1,87 @@
+/* Account type choice */
+.type-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.type-choices legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form .type-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.form .type-choice:has(input:checked) {
+  background: var(--green-light);
+  border-color: var(--green);
+}
+.form .type-choice input {
+  display: inline-block;
+  width: auto;
+  margin: 4px 0 0;
+  padding: 0;
+  accent-color: var(--green);
+}
+.type-choice span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.type-choice small {
+  color: var(--muted);
+}
+
+.form .register-select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 16px;
+}
+
+/* Password rules checklist */
+.password-rules {
+  display: grid;
+  gap: 4px;
+  margin: -6px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+.password-rules li {
+  display: flex;
+  gap: 8px;
+}
+.password-rules .met {
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.confirm-help {
+  min-height: 18px;
+  margin: -8px 0 0;
+  font-size: 13px;
+}
+.confirm-help.ok {
+  color: var(--green-dark);
+}
+.confirm-help.bad {
+  color: var(--danger);
+}

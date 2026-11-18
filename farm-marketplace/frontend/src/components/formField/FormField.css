@@ -1,0 +1,64 @@
+.ff {
+  display: block;
+}
+.ff-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.ff label {
+  display: block;
+  font-size: 14px;
+}
+.ff-count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.ff input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+.ff select,
+.ff textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 16px;
+  color: inherit;
+}
+.ff input:focus,
+.ff select:focus,
+.ff textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.ff select:disabled {
+  background: #f3f1e8;
+  color: var(--muted);
+}
+
+.ff [aria-invalid="true"],
+.checkout-field [aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.ff-hint,
+.ff-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+.ff-hint {
+  color: var(--muted);
+}
+.ff-error.ff-error {
+  color: var(--danger);
+}
+
+.checkout-box .checkout-row + .ff,
+.checkout-box .checkout-field + .ff {
+  margin-top: 14px;
+}

@@ -1,0 +1,146 @@
+/* Phone and touch fixes. Imported last in main.jsx, so these rules win. */
+
+/* A safety net: nothing may make the page scroll sideways */
+.app {
+  overflow-x: clip;
+}
+
+/* Use the real visible height on phones, where the address bar comes and goes */
+.app,
+.login {
+  min-height: 100dvh;
+}
+.details-dialog,
+.lf-dialog {
+  max-height: calc(100dvh - 32px);
+}
+.details {
+  max-height: calc(100dvh - 32px);
+}
+
+/* Text fields at 16px stop iPhones from zooming in when you tap them */
+@media (max-width: 800px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Bigger tap targets on touch screens */
+@media (pointer: coarse) {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .category-chip,
+  .seller-chip,
+  .account-tab {
+    min-height: 44px;
+  }
+  .qty button {
+    width: 40px;
+    height: 40px;
+  }
+  .stepper-minus {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .link-danger,
+  .cart-remove,
+  .cart-clear,
+  .catalogue-clear,
+  .details-report-link,
+  .nav-menu button {
+    min-height: 40px;
+  }
+  .pm-copy {
+    min-height: 36px;
+    padding: 6px 14px;
+  }
+}
+
+/* The navbar on phones: logo and basket, then location, then search */
+@media (max-width: 640px) {
+  .navbar-strip {
+    font-size: 12px;
+  }
+  .navbar-main {
+    gap: 10px 12px;
+  }
+  .navbar-logo {
+    order: 1;
+  }
+  .navbar-actions {
+    order: 2;
+    margin-left: auto;
+    gap: 14px;
+  }
+  .navbar-main > .nav-dropdown {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .navbar-search {
+    order: 4;
+    flex-basis: 100%;
+  }
+  .nav-location {
+    padding: 4px 0;
+  }
+  .nav-location span {
+    max-width: none;
+  }
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 16px;
+  }
+  .navbar-menu a,
+  .nav-menu-button {
+    padding: 10px 2px 8px;
+    font-size: 15px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+  .home-hero {
+    padding: 28px 0;
+  }
+  .fresh-deals {
+    padding-top: 32px;
+  }
+
+  .catalogue-grid {
+    gap: 10px;
+  }
+  .product-card {
+    padding: 10px;
+  }
+  .product-card-image {
+    height: 120px;
+  }
+  .product-card-name {
+    font-size: 15px;
+  }
+  .product-card-price {
+    font-size: 16px;
+  }
+  .stepper {
+    gap: 4px;
+    max-width: 100%;
+    padding: 0 4px 0 8px;
+  }
+  .stepper-count {
+    min-width: 28px;
+  }
+
+  .tracker li {
+    font-size: 11.5px;
+  }
+  .container {
+    padding: 0 14px;
+  }
+}

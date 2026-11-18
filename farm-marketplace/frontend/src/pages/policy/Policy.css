@@ -1,0 +1,28 @@
+.policy {
+  max-width: 720px;
+  padding-top: 48px;
+  padding-bottom: 56px;
+}
+.policy h1 {
+  margin: 0 0 12px;
+}
+.policy-draft {
+  margin: 0 0 24px;
+  padding: 8px 12px;
+  background: var(--amber-bg);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--amber);
+}
+.policy h2 {
+  margin: 24px 0 6px;
+  font-size: 20px;
+}
+.policy p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.policy .policy-draft {
+  color: var(--amber);
+}

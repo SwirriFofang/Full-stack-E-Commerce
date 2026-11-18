@@ -1,0 +1,26 @@
+.scroll-stack {
+  position: relative;
+}
+
+.scroll-stack-under {
+  position: sticky;
+  top: 0; /* the script sets the real value */
+}
+
+.scroll-stack-over {
+  position: relative;
+  z-index: 2;
+  border-radius: 32px 32px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* People who prefer less motion get a normal, flat page */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-stack-under {
+    position: static;
+  }
+  .scroll-stack-over {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,14 @@
+.about {
+  max-width: 720px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.about h1 {
+  margin: 0 0 16px;
+}
+.about p {
+  margin: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}

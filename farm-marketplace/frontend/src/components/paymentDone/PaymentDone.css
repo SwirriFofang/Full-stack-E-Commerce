@@ -1,0 +1,69 @@
+.paydone {
+  width: min(440px, calc(100vw - 32px));
+  padding: 32px 28px 28px;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  color: var(--ink);
+  text-align: center;
+}
+.paydone::backdrop {
+  background: rgba(20, 32, 22, 0.55);
+}
+
+.paydone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  background: var(--green);
+  border-radius: 50%;
+  color: #fff;
+}
+.paydone-icon-warn {
+  background: var(--amber);
+}
+
+.paydone h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+.paydone-text {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.paydone-orders {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.paydone-orders li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+.paydone-orders small {
+  color: var(--muted);
+}
+
+.paydone-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  padding-top: 12px;
+  border-top: 2px solid var(--ink);
+  font-size: 18px;
+}
+
+.paydone-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

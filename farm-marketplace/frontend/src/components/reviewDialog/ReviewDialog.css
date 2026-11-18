@@ -1,0 +1,78 @@
+.review-dialog {
+  width: min(440px, calc(100vw - 32px));
+  padding: 28px;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  color: var(--ink);
+}
+.review-dialog::backdrop {
+  background: rgba(20, 32, 22, 0.55);
+}
+.review-dialog h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+.stars legend {
+  float: left;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 14px;
+}
+.star {
+  position: relative;
+  font-size: 38px;
+  line-height: 1;
+  color: #d9d6c7;
+  cursor: pointer;
+}
+.star-on {
+  color: #e8a23b;
+}
+.star input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.star input:focus-visible + span {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.review-comment {
+  display: block;
+  font-size: 14px;
+}
+.review-comment textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+  resize: vertical;
+}
+.review-comment textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}

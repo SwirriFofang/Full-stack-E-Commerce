@@ -1,0 +1,30 @@
+.category {
+  padding-top: 28px;
+  padding-bottom: 56px;
+}
+.category-crumbs {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.category-crumbs a {
+  color: var(--green);
+  text-decoration: underline;
+}
+.category h1 {
+  margin: 0;
+  font-size: 32px;
+}
+.category h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--green);
+}
+.category-sub {
+  margin: 14px 0 22px;
+  color: var(--muted);
+}

@@ -1,0 +1,79 @@
+.catalogue {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.catalogue-title {
+  margin: 0 0 20px;
+  font-size: 28px;
+  text-align: center;
+}
+.catalogue-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  background: var(--green);
+}
+
+.catalogue .category-chips {
+  justify-content: center;
+}
+
+.catalogue-filters {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+.catalogue-clear {
+  padding: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--green);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.catalogue-status {
+  color: var(--muted);
+  text-align: center;
+}
+.catalogue-error {
+  color: var(--danger);
+}
+
+/* All the cards in one uniform, centered set. Every card is the same width,
+   and a shorter last row stays in the middle. */
+.catalogue-blend,
+.catalogue .product-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.catalogue-blend-item {
+  display: flex;
+  flex: 0 1 220px;
+}
+.catalogue-blend-item > .product-card {
+  flex: 1;
+  min-width: 0;
+}
+.catalogue .product-list-grid > .product-card {
+  flex: 0 1 220px;
+}
+
+@media (max-width: 520px) {
+  .catalogue-blend,
+  .catalogue .product-list-grid {
+    gap: 10px;
+  }
+  .catalogue-blend-item,
+  .catalogue .product-list-grid > .product-card {
+    flex: 0 0 calc(50% - 5px);
+  }
+}

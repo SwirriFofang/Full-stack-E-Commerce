@@ -1,0 +1,25 @@
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 999px;
+  font-size: 14px;
+}
+.category-chip:hover {
+  background: #f3f1e8;
+  color: var(--ink);
+}
+.category-chip-active,
+.category-chip-active:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}

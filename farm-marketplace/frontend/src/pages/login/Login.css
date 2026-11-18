@@ -1,0 +1,108 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.login-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+}
+
+.login-logo img {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+}
+
+.login-box h1 {
+  margin: 28px 0 28px;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.15;
+}
+
+.login-box .form {
+  width: 100%;
+  text-align: left;
+}
+
+.login-signup {
+  margin: 18px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+.login-signup a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.login-terms {
+  max-width: 36ch;
+  margin: 22px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.login-terms a {
+  color: #b34e00;
+  text-decoration: underline;
+}
+
+.login-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 10px 28px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 999px;
+  font-size: 16px;
+}
+.login-back:hover {
+  background: var(--green-light);
+  color: var(--ink);
+}
+
+/* The green picture panel */
+.login-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #e9f3e1;
+}
+.login-art img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  border-radius: 24px;
+}
+
+@media (max-width: 800px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+  .login-art {
+    display: none;
+  }
+}
+
+.login-art .animated-art {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 24px;
+  mix-blend-mode: multiply; /* delete this line if your video has its own coloured background */
+}

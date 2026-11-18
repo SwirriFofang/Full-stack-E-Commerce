@@ -1,0 +1,188 @@
+.admin {
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+.admin h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.admin-sub {
+  margin: 4px 0 20px;
+  color: var(--muted);
+}
+
+/* Filter bars */
+.admin-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.admin-search {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 220px;
+}
+.admin-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+}
+.admin-select {
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+}
+.admin-search input:focus,
+.admin-select:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.admin-count {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Rows for users and reports */
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.admin-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.admin-row-title {
+  margin: 0;
+  font-weight: 600;
+}
+.admin-row-meta {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.danger-btn {
+  color: var(--danger);
+}
+
+/* Badges */
+.role-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 10px;
+  background: #ece9dd;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.role-seller {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+.role-admin {
+  background: var(--ink);
+  color: #fff;
+}
+.status-suspended {
+  background: #f3dcd8;
+  color: var(--danger);
+}
+.status-archived {
+  background: #e6e4da;
+  color: #3d4640;
+}
+
+/* Overview */
+.attention ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.attention li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.attention-count {
+  display: inline-block;
+  min-width: 32px;
+  margin-right: 6px;
+  padding: 2px 8px;
+  background: #ece9dd;
+  border-radius: 999px;
+  text-align: center;
+}
+.attention-on {
+  background: var(--amber-bg);
+  color: var(--amber);
+}
+
+/* Reports */
+.report {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+.report-details {
+  margin: 8px 0 0;
+  font-style: italic;
+}
+.report-note {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.report-note textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+  resize: vertical;
+}
+.report-actions {
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+  .admin-row {
+    grid-template-columns: 1fr;
+  }
+  .admin-actions {
+    justify-content: flex-start;
+  }
+}

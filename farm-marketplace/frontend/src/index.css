@@ -1,0 +1,156 @@
+
+
+:root {
+  --green: #2f7d3a;
+  --green-dark: #256530;
+  --green-light: #e4efdd;
+  --ink: #1d2a1f;
+  --muted: #4f5b50;
+  --line: #e3e1d6;
+  --bg: #fbfaf5;
+  --danger: #b42318;
+  --amber-bg: #fdf0d5;
+  --amber: #8a4b00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-message {
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--green-dark);
+}
+.btn-outline {
+  background: #fff;
+  border-color: #c9c7ba;
+  color: var(--ink);
+}
+.btn-outline:hover:not(:disabled) {
+  background: #f3f1e8;
+}
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Forms (login, register, and later the seller forms) */
+.form-page {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+.form-page h1 {
+  margin: 0 0 24px;
+  font-size: 26px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form label {
+  display: block;
+  font-size: 14px;
+}
+.form input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  border: 1px solid #c9c7ba;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.form input:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.form-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 14px;
+}
+.form-hint {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.form-hint a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg) url("./assets/f2d-bg.png") ;
+  background-size: 360px 360px;
+  color: var(--ink);
+}
+
+/* Keeps the footer at the bottom, even on short pages */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app-main {
+  flex: 1;
+}

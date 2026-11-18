@@ -1,0 +1,54 @@
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 16px 56px;
+  text-align: center;
+}
+
+.empty-cart-art {
+  width: min(340px, 80vw);
+  margin-bottom: 28px;
+}
+/* Makes a white video background blend into the page background.
+   Delete this rule if your video has its own coloured background. */
+.empty-cart .animated-art {
+  mix-blend-mode: multiply;
+}
+
+.empty-cart h1 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.empty-cart p {
+  margin: 0 0 32px;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.empty-cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(440px, 100%);
+  padding: 16px 24px;
+  background: var(--green);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.empty-cart-button:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+.empty-cart-button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
